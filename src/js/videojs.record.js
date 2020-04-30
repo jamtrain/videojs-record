@@ -1091,7 +1091,10 @@ class Record extends Plugin {
                     }
 
                     // load recorded media
-                    this.load(this.player.recordedData);
+                    this.load({
+			src: this.player.recordedData,
+			type: this.player.recordedData.type,
+		    });
                 });
 
                 // pause player so user can start playback
